@@ -1,0 +1,31 @@
+<h1>Items</h1>
+
+<p><%= link_to 'Add a New Item', "/items/new" %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.id %></td>
+      <td><%= item.title %></td>
+      <td><%= item.address %></td>
+
+      <td><%= link_to 'Show Details', "/items/#{item.id}" %></td>
+      <td><%= link_to 'Edit', "/items/#{item.id}/edit" %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
