@@ -2,7 +2,7 @@
 # bob = { :name => "Bob Smith", :id => "4253", :expires => "12/31/14"}
 
 # def display_id_card(card_type, person_info)
-#   puts "Card Type: #{card_type}"
+#   puts "Card Type: #{2 + 5}"
 #   puts "Name: #{person_info[:name]}"
 #   puts "ID#: #{person_info[:id]}"
 #   puts "Expires: #{person_info[:expires]}"
@@ -46,5 +46,29 @@ person2.id = "4253"
 person2.expires = "12/31/2014"
 person2.role = "Student"
 
-display_id_card(person1)
-display_id_card(person2)
+raghu = IdentificationCard.new
+raghu.first_name = "Raghu"
+raghu.last_name = "Betina"
+raghu.id = "4353"
+raghu.expires = "13/31/3014"
+raghu.role = "Student"
+
+cards = [person1, person2]
+
+cards.each do |card|
+  display_id_card(card)
+  puts "Done with that card!"
+end
+puts "All Done!"
+# display_id_card(person1)
+# display_id_card(person2)
+# display_id_card(raghu)
+
+
+
+
+
+
+
+
+
