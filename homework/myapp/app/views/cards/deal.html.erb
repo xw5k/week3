@@ -1,0 +1,10 @@
+<h1>Poker Cards</h1>
+
+<a href="http://localhost:3000/poker">Refresh this page to deal a new hand.</a>
+
+<ul>
+  <% @cardsdealt.each do |c| %>
+  <li><%= c.deal_card %></li>
+  <% end %>
+  <% @cardsdealt.clear %>
+</ul>
